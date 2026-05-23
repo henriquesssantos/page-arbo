@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* ============================================
+   ARBO MARCENARIA — GLOBAL DESIGN SYSTEM
+   ============================================ */
+
+/* Custom Theme Variables */
+@theme {
+  --color-wood-dark: #3E2723;
+  --color-wood-medium: #5D4037;
+  --color-wood-light: #8D6E63;
+  --color-warm-beige: #D7CCC8;
+  --color-warm-cream: #EFEBE9;
+  --color-off-white: #FAF8F6;
+  --color-charcoal: #1A1A1A;
+  --color-gold: #C9A96E;
+  --color-bg-dark: #0a0a0a;
+  --color-bg-section: #0f0d0b;
+
+  --font-family-playfair: "Playfair Display", serif;
+  --font-family-inter: "Inter", sans-serif;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-inter);
+  background-color: #0a0a0a;
+  color: #FAF8F6;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   FONT UTILITY CLASSES
+   ============================================ */
+
+.font-playfair {
+  font-family: var(--font-family-playfair);
+}
+
+.font-inter {
+  font-family: var(--font-family-inter);
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A96E33;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A96E66;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #C9A96E33 #0a0a0a;
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+  background-color: #C9A96E40;
+  color: #FAF8F6;
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
