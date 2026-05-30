@@ -6,28 +6,31 @@ export interface CatalogItem {
   category: string;
 }
 
+const catalogFile = (filename: string) =>
+  publicPath(`/catalogo/${encodeURIComponent(filename)}`);
+
 /**
  * Adicione novas entradas ao incluir imagens em public/catalogo/
  */
 export const catalogItems: CatalogItem[] = [
   {
-    src: publicPath('/catalogo/download.jfif'),
-    title: 'Mesa Suspensa Industrial',
-    category: 'Escritório',
+    src: catalogFile('mesa flutuante.jfif'),
+    title: 'Mesa Flutuante',
+    category: 'Home Office',
   },
   {
-    src: publicPath('/catalogo/download (1).jfif'),
-    title: 'Adega de Parede',
-    category: 'Decoração',
-  },
-  {
-    src: publicPath('/catalogo/download (2).jfif'),
-    title: 'Mesa de Centro Maciça',
+    src: catalogFile('mesa de centro.jfif'),
+    title: 'Mesa de Centro',
     category: 'Sala de Estar',
   },
   {
-    src: publicPath('/catalogo/download3.jfif'),
-    title: 'Escritório Flutuante',
-    category: 'Home Office',
+    src: catalogFile('wine decor.jfif'),
+    title: 'Wine Decor',
+    category: 'Decoração',
+  },
+  {
+    src: catalogFile('nicho.jfif'),
+    title: 'Nicho de Parede',
+    category: 'Decoração',
   },
 ];
